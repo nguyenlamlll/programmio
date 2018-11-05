@@ -47,6 +47,14 @@ class KnowledgeMap extends React.Component {
         });
         console.log(this.state);
     };
+    
+    handleBackClick = () => {
+        this.setState({
+            isShowing: true,
+            isCourseShowing: false,
+            courseTitle: ""
+        });
+    }
 
     render() {
         const { classes } = this.props;
@@ -55,25 +63,31 @@ class KnowledgeMap extends React.Component {
             <div className={classes.root}>
                 {this.state.isShowing && (
                     <div className={``}>
-                        <Grid container spacing={24}>
-                            <Grid item xs={6}>
+                        <Grid container spacing={16}>
+                            <Grid item xs={4}>
                                 <KnowledgeNode title='Basic' onStartLearningClick={this.handleStartLearning} />
                             </Grid>
-                            <Grid item xs={6}>
+                            <Grid item xs={4}>
                                 <KnowledgeNode title='Algorithm' onStartLearningClick={this.handleStartLearning} />
                             </Grid>
-                            <Grid item xs={6}>
+                            <Grid item xs={4}>
                                 <KnowledgeNode title='Structures' onStartLearningClick={this.handleStartLearning} />
                             </Grid>
-                            <Grid item xs={6}>
+                            <Grid item xs={4}>
                                 <KnowledgeNode title='Logic' onStartLearningClick={this.handleStartLearning} />
+                            </Grid>
+                            <Grid item xs={4}>
+                                <KnowledgeNode title='Script' onStartLearningClick={this.handleStartLearning} />
+                            </Grid>
+                            <Grid item xs={4}>
+                                <KnowledgeNode title='Program' onStartLearningClick={this.handleStartLearning} />
                             </Grid>
                         </Grid>
                     </div>
                 )}
 
                 {this.state.isCourseShowing && (
-                    <Course courseTitle={this.state.courseTitle}/>
+                    <Course courseTitle={this.state.courseTitle} handleBackClick={this.handleBackClick}/>
                 )}
 
             </div>
