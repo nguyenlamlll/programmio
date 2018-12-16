@@ -24,6 +24,9 @@ const styles = {
     marginLeft: -12,
     marginRight: 20,
   },
+  appBar: {
+    background: '#00B80E'
+  }
 };
 
 class AppHeader extends React.Component {
@@ -59,7 +62,7 @@ class AppHeader extends React.Component {
             label={auth ? 'Logout' : 'Login'}
           />
         </FormGroup> */}
-        <AppBar position="static">
+        <AppBar position="static" className={classes.appBar}>
           <Toolbar>
             <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
               <MenuIcon />

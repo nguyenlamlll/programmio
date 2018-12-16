@@ -7,21 +7,30 @@ import Typography from '@material-ui/core/Typography';
 
 import Course from '../Course/Course';
 import KnowledgeNode from './KnowledgeNode';
+import KnowledgeMapHeader from './KnowledgeMapHeader';
 
 import './KnowledgeMap.css';
 
 const styles = theme => ({
     root: {
         flexGrow: 1,
-        display: 'inline-block',
-        position: 'fixed',
-        top: '0',
-        bottom: '0',
-        right: '0',
-        left: '0',
-        margin: 'auto',
-        width: '30em',
-        height: '10em'
+        // display: 'inline-block',
+        // position: 'fixed',
+        // top: '0',
+        // bottom: '0',
+        // right: '0',
+        // left: '0',
+        // margin: 'auto',
+        // width: '30em',
+        // height: '10em'
+        // position: 'absolute',
+        // width: '940px',
+        // left: 'calc(50% - 940px/2)',
+        // top: '178px',
+        // bottom: '45px',
+        background: 'rgba(255, 255, 255, 1)',
+        height: '650px',
+        marginTop: '10px'
     },
     paper: {
         padding: theme.spacing.unit * 2,
@@ -63,7 +72,8 @@ class KnowledgeMap extends React.Component {
             <div className={classes.root}>
                 {this.state.isShowing && (
                     <div className={``}>
-                        <Grid container spacing={16}>
+                        <KnowledgeMapHeader/>
+                        <Grid container spacing={8}>
                             <Grid item xs={4}>
                                 <KnowledgeNode title='Basic' onStartLearningClick={this.handleStartLearning} />
                             </Grid>
