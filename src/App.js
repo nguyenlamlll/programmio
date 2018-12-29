@@ -9,6 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import AppHeader from './components/Header/AppHeader';
 import KnowledgeMap from './components/KnowledgeMap/KnowledgeMap';
 import PersonalProgress from './components/PersonalProgress/PersonalProgress';
+import FriendBox from './components/Friend/FriendBox';
 
 class App extends Component {
   render() {
@@ -16,7 +17,7 @@ class App extends Component {
       <div className="App" >
         <AppHeader/>
         <Grid container spacing={16}>
-          <Grid item xs={0} sm={0} lg={2}>
+          <Grid item xs={0} sm={2} lg={2}>
           </Grid>
           <Grid item xs={11} sm={7} lg={7}>
             <KnowledgeMap/>
@@ -25,7 +26,7 @@ class App extends Component {
           <Grid item xs={12} sm={2} lg={2}>
             <PersonalProgress/>
 
-            <PersonalProgress/>
+            <FriendBox/>
           </Grid>
         </Grid>
 
