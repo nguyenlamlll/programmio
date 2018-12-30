@@ -16,7 +16,9 @@ const styles = theme => ({
     },
     editButton: {
         backgroundColor: colors.complimentLight,
-        borderRadius: '0'
+        borderRadius: '0',
+        width: '95px',
+        heigth: '33px'
     }
 });
 
@@ -31,13 +33,13 @@ class KnowledgeMapHeader extends React.Component {
         return (
             <div className={classes.root}>
                 <Grid container justify='center' alignItems='center'>
-                    <Grid item xs={12} md={10}>
+                    <Grid item xs={12} md={9}>
                         <h1>Objective: Front-end Web Developer</h1>
                     </Grid>
-                    <Grid item xs={12} md={1}
+                    <Grid item xs={12} md={2}
                         container justify='flex-end'>
-                        <Grid item xs={12} sm={10} md={9} lg={7}>
-                            <Button variant="contained" color='primary' className={classes.editButton} >
+                        <Grid item xs={12} sm={12} md={10} lg={7}>
+                            <Button variant="contained" color='primary' className={classes.editButton}>
                                 Edit
                             </Button>
                         </Grid>
