@@ -9,7 +9,7 @@ import Course from '../Course/Course';
 import KnowledgeNode from './KnowledgeNode';
 import KnowledgeMapHeader from './KnowledgeMapHeader';
 
-import './KnowledgeMap.css';
+//import './KnowledgeMap.css';
 
 const styles = theme => ({
     root: {

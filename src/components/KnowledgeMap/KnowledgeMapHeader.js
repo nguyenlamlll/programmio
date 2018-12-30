@@ -12,7 +12,8 @@ const styles = theme => ({
     root: {
         flexGrow: 1,
         textAlign: 'left',
-        marginLeft: '5px'
+        boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.25)',
+        borderBottom: '4px solid ' + colors.primary
     },
     editButton: {
         backgroundColor: colors.complimentLight,
