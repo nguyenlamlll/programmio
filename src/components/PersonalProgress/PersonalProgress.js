@@ -11,7 +11,14 @@ const styles = theme => ({
         flexGrow: 1,
         background: 'rgba(255, 255, 255, 1)'
     },
-
+    achievementBox: {
+        width: '49px',
+        height: '49px',
+        left: '208px',
+        top: '162px',
+        background: '#C4C4C4',
+        borderRadius: '7px'
+    }
 });
 
 
@@ -24,12 +31,34 @@ class PersonalProgress extends React.Component {
         const { classes } = this.props;
         return (
             <div className={classes.root}>
-                <h2>Header.</h2>
-                <h4>Level</h4>
-                <h4>Streak</h4>
+                <h2>Personal Progress</h2>
+                <Grid container justify='flext-start' alignItems='center'>
+                    <Grid item xs={12} style={{ paddingLeft: 20 }}>
+                        <Grid container justify='flext-start' alignItems='center' spacing={16}>
+                            <p>Level</p>
+                            <p>------</p>
+                        </Grid>
+                    </Grid>
+                    <Grid item xs={12} style={{ paddingLeft: 20 }}>
+                        <Grid container justify='flext-start' alignItems='center' spacing={16}>
+                            <p>Streak</p>
+                            <p>------</p>
+                        </Grid>
+                    </Grid>
 
-                <h4>Achievement</h4>
-                <p>There will be something here.</p>
+                    <Grid item xs={12} style={{ paddingLeft: 20 }}>
+                        <Grid container justify='flext-start' alignItems='center' spacing={16}>
+                            <p>Achievement</p>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid container spacing={8} justify='center' alignItems='center' >
+                    {[0, 1, 2, 3, 4, 5, 6, 7].map(value => (
+                        <Grid key={value} item>
+                             <div className={classes.achievementBox}></div>
+                        </Grid>
+                    ))}
+                </Grid>
             </div>
         );
 

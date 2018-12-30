@@ -38,3 +38,13 @@ h1 {
   line-height: normal;
   font-size: 33px;
 }
+
+h2 {
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+p {
+  font-family: Roboto;
+}
