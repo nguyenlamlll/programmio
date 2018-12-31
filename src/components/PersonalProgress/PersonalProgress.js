@@ -32,22 +32,22 @@ class PersonalProgress extends React.Component {
         return (
             <div className={classes.root}>
                 <h2>Personal Progress</h2>
-                <Grid container justify='flext-start' alignItems='center'>
+                <Grid container justify='flex-start' alignItems='center'>
                     <Grid item xs={12} style={{ paddingLeft: 20 }}>
-                        <Grid container justify='flext-start' alignItems='center' spacing={16}>
+                        <Grid container justify='flex-start' alignItems='center' spacing={16}>
                             <p>Level</p>
                             <p>------</p>
                         </Grid>
                     </Grid>
                     <Grid item xs={12} style={{ paddingLeft: 20 }}>
-                        <Grid container justify='flext-start' alignItems='center' spacing={16}>
+                        <Grid container justify='flex-start' alignItems='center' spacing={16}>
                             <p>Streak</p>
                             <p>------</p>
                         </Grid>
                     </Grid>
 
                     <Grid item xs={12} style={{ paddingLeft: 20 }}>
-                        <Grid container justify='flext-start' alignItems='center' spacing={16}>
+                        <Grid container justify='flex-start' alignItems='center' spacing={16}>
                             <p>Achievement</p>
                         </Grid>
                     </Grid>

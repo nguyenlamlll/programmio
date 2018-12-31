@@ -13,6 +13,8 @@ import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 const styles = {
   root: {
     flexGrow: 1,
@@ -96,8 +98,12 @@ class AppHeader extends React.Component {
                   open={open}
                   onClose={this.handleClose}
                 >
-                  <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-                  <MenuItem onClick={this.handleClose}>My account</MenuItem>
+                  <MenuItem onClick={this.handleClose} component={Link} to="/profile">
+                      Profile
+                  </MenuItem>
+                  <MenuItem onClick={this.handleClose}>
+                    My account
+                  </MenuItem>
                 </Menu>
               </div>
             )}
