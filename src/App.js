@@ -16,12 +16,12 @@ class App extends Component {
   render() {
 
     return (
-      <Router basename={BASE_NAME}>
+      <Router>
         <div className="App" >
           <AppHeader/>
 
-          <Route exact path={`/`} component={Main} />
-          <Route path={`/profile`} component={Profile} />
+          <Route exact path={`${BASE_NAME}/`} component={Main} />
+          <Route path={`${BASE_NAME}/profile`} component={Profile} />
         </div>
       </Router>
     );

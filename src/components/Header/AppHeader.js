@@ -15,6 +15,8 @@ import Menu from '@material-ui/core/Menu';
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+import { BASE_NAME } from './../../Config';
+
 const styles = {
   root: {
     flexGrow: 1,
@@ -98,7 +100,7 @@ class AppHeader extends React.Component {
                   open={open}
                   onClose={this.handleClose}
                 >
-                  <MenuItem onClick={this.handleClose} component={Link} to={`/profile`}>
+                  <MenuItem onClick={this.handleClose} component={Link} to={`${BASE_NAME}/profile`}>
                       Profile
                   </MenuItem>
                   <MenuItem onClick={this.handleClose}>
