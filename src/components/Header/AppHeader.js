@@ -98,7 +98,7 @@ class AppHeader extends React.Component {
                   open={open}
                   onClose={this.handleClose}
                 >
-                  <MenuItem onClick={this.handleClose} component={Link} to="/profile">
+                  <MenuItem onClick={this.handleClose} component={Link} to={`/profile`}>
                       Profile
                   </MenuItem>
                   <MenuItem onClick={this.handleClose}>
