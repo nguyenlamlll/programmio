@@ -7,17 +7,16 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
 import AppHeader from './components/Header/AppHeader';
-
 import Main from './components/Main';
-
 import Profile from './components/Profile/Profile';
+import { BASE_NAME } from './Config';
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename={BASE_NAME}>
         <div className="App" >
           <AppHeader/>
 
