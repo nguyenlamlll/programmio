@@ -1,14 +1,15 @@
 {
-  "main.css": "/programmio/static/css/main.b5a8038f.chunk.css",
-  "main.js": "/programmio/static/js/main.5594c944.chunk.js",
-  "main.js.map": "/programmio/static/js/main.5594c944.chunk.js.map",
-  "static/js/1.864e19bb.chunk.js": "/programmio/static/js/1.864e19bb.chunk.js",
-  "static/js/1.864e19bb.chunk.js.map": "/programmio/static/js/1.864e19bb.chunk.js.map",
+  "main.css": "/programmio/static/css/main.4b0499b7.chunk.css",
+  "main.js": "/programmio/static/js/main.c10f1354.chunk.js",
+  "main.js.map": "/programmio/static/js/main.c10f1354.chunk.js.map",
+  "static/js/1.404807e4.chunk.js": "/programmio/static/js/1.404807e4.chunk.js",
+  "static/js/1.404807e4.chunk.js.map": "/programmio/static/js/1.404807e4.chunk.js.map",
   "runtime~main.js": "/programmio/static/js/runtime~main.dbca0398.js",
   "runtime~main.js.map": "/programmio/static/js/runtime~main.dbca0398.js.map",
+  "static/css/main.4b0499b7.chunk.css.map": "/programmio/static/css/main.4b0499b7.chunk.css.map",
+  "static/media/fire.png": "/programmio/static/media/fire.c62adabf.png",
   "static/media/logo.svg": "/programmio/static/media/logo.5d5d9eef.svg",
-  "static/css/main.b5a8038f.chunk.css.map": "/programmio/static/css/main.b5a8038f.chunk.css.map",
   "index.html": "/programmio/index.html",
-  "precache-manifest.7e9d36bf783efc94728b01923b38abf9.js": "/programmio/precache-manifest.7e9d36bf783efc94728b01923b38abf9.js",
+  "precache-manifest.60a1c406a0ab3ce5c266f2ee3ba30b3a.js": "/programmio/precache-manifest.60a1c406a0ab3ce5c266f2ee3ba30b3a.js",
   "service-worker.js": "/programmio/service-worker.js"
 }
