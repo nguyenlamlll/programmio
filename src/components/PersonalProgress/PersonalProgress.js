@@ -9,10 +9,14 @@ import Button from '@material-ui/core/Button';
 import fire from '../../assets/fire.png';
 import colors from './../../colors';
 
+import { Link } from 'react-router-dom';
+import { BASE_NAME } from './../../Config';
+
 const styles = theme => ({
     root: {
         flexGrow: 1,
-        background: 'rgba(255, 255, 255, 1)'
+        background: 'rgba(255, 255, 255, 1)',
+        marginTop: '10px'
     },
     achievementBox: {
         width: '49px',
@@ -43,7 +47,7 @@ const styles = theme => ({
     },
     header: {
         textAlign: 'left',
-        marginTop: '10px'
+        //marginTop: '10px'
     },
     viewMoreButton: {
         backgroundColor: colors.complimentLight,
@@ -63,12 +67,12 @@ class PersonalProgress extends React.Component {
         const { classes } = this.props;
         return (
             <div className={classes.root}>
-                <div>
-                    <h3 className={classes.header}>
-                        Personal Progress
-                    </h3>
-                </div>
                 <Grid container justify='flex-start' alignItems='center'>
+                    <Grid item xs={12} style={{ paddingLeft: 20 }}>
+                        <h3 className={classes.header}>
+                            Personal Progress
+                        </h3>
+                    </Grid>
                     <Grid item xs={12} style={{ paddingLeft: 20 }}>
                         <Grid container justify='flex-start' alignItems='center' spacing={8}>
                             <Grid item xs={2} md={2}>
@@ -102,8 +106,10 @@ class PersonalProgress extends React.Component {
                     </Grid>
 
                     <Grid item xs={12} style={{ paddingLeft: 20 }}>
-                        <Grid container justify='flex-start' alignItems='center' spacing={16}>
-                            <p>Achievement</p>
+                        <Grid container justify='flex-start' alignItems='center' spacing={8}>
+                            <Grid item>
+                                <p>Achievement</p>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -115,8 +121,9 @@ class PersonalProgress extends React.Component {
                     ))}
                 </Grid>
                 <Grid container justify='center' alignItems='center'>
-                    <Grid item style={{ margin: 10}}>
-                        <Button variant="contained" color='primary' className={classes.viewMoreButton}>
+                    <Grid item style={{ marginTop: 22, marginBottom: 9 }}>
+                        <Button variant="contained" color='primary' className={classes.viewMoreButton}
+                            component={Link} to={`${BASE_NAME}/profile`}>
                             View More
                         </Button>
                     </Grid>
