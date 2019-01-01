@@ -10,6 +10,8 @@ import Avatar from '@material-ui/core/Avatar';
 import FolderIcon from '@material-ui/icons/Folder';
 import Divider from '@material-ui/core/Divider';
 
+import colors from './../../colors';
+
 function getModalStyle() {
     const top = 50;
     const left = 50;
@@ -18,6 +20,7 @@ function getModalStyle() {
         top: `${top}%`,
         left: `${left}%`,
         transform: `translate(-${top}%, -${left}%)`,
+        //width: `817px`
     };
 }
 
@@ -45,6 +48,7 @@ const styles = theme => ({
         backgroundColor: theme.palette.background.paper,
         boxShadow: theme.shadows[5],
         padding: theme.spacing.unit * 4,
+        outline: 'none',
     },
     modalButtons: {
         paddingTop: '15px'
@@ -55,6 +59,10 @@ const styles = theme => ({
     avatar: {
         width: 100,
         height: 100
+    },
+    button: {
+        backgroundColor: colors.complimentLight,
+        borderRadius: '0',
     }
 });
 
@@ -96,15 +104,16 @@ class KnowledgeNode extends React.Component {
                     aria-describedby="simple-modal-description"
                     open={this.state.open}
                     onClose={this.handleClose}
+                    //style={{alignItems:'center',justifyContent:'center'}}
                 >
                     <div style={getModalStyle()} className={classes.paper}>
-                        <Grid container spacing={16}>
-                            <Grid item xs={3}>
+                        <Grid container spacing={8} justify='center' alignItems='flex-start'>
+                            <Grid item xs={3} lg={3}>
                                 <Avatar className={classes.avatar}>
                                     <FolderIcon />
                                 </Avatar>
                             </Grid>
-                            <Grid item xs={9}>
+                            <Grid item xs={8} lg={8}>
                                 <Typography variant="h5" id="modal-title">
                                     {this.props.title}
                                 </Typography>
@@ -112,18 +121,21 @@ class KnowledgeNode extends React.Component {
                             </Grid>
                         </Grid>
 
-                        <Typography variant="subtitle1" id="simple-modal-description" className={classes.modalBody}>
-                            Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.
+                        <Typography variant="body2" id="simple-modal-description" className={classes.modalBody}>
+                            Begin with this and that, you will learn the amazing things of all greatness in this universe. However, things will get out of our hands quickly. Simple static arrays won’t do us enough good. Imagine we have a town of 20.000 hectares and we are the heads of the town. At day 01, there are probably 10 houses only. We may decide an array of 10. But eventually, more and more people will come to our lovely house. Add more array? Seems good but now we have to manage all of those arrays. Can we merge them into a container somehow?
                         </Typography>
+
                         <Grid container spacing={16} className={classes.modalButtons}>
                             <Grid item xs={6}>
                                 <Button variant="contained" color="primary" fullWidth
-                                    onClick={this.handleStartLearningModalClick}>
+                                    onClick={this.handleStartLearningModalClick}
+                                    className={classes.button}>
                                     Start Learning
                                 </Button>
                             </Grid>
                             <Grid item xs={6}>
-                                <Button variant="contained" color="primary" fullWidth>
+                                <Button variant="contained" color="primary" fullWidth
+                                    className={classes.button}>
                                     Test out
                                 </Button>
                             </Grid>

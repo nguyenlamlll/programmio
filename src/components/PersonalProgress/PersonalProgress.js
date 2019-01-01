@@ -4,7 +4,10 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 
+import fire from '../../assets/fire.png';
+import colors from './../../colors';
 
 const styles = theme => ({
     root: {
@@ -18,6 +21,35 @@ const styles = theme => ({
         top: '162px',
         background: '#C4C4C4',
         borderRadius: '7px'
+    },
+    backgroundLevelBar: {
+        background: '#E5E5E5',
+        borderRadius: '15px',
+        width: '167px',
+        height: '12px'
+    },
+    foregroundLevelBar: {
+        background: '#50B8F3',
+        borderRadius: '15px',
+        width: '60px',
+        height: '12px'
+    },
+    streak: {
+        backgroundImage: 'url(//d35aaqx5ub95lt.cloudfront.net/images/icon-sprite8.svg)',
+        backgroundSize: '1500px',
+        backgroundPosition: '-47px -56px',
+        width: '30px',
+        height: '49px'
+    },
+    header: {
+        textAlign: 'left',
+        marginTop: '10px'
+    },
+    viewMoreButton: {
+        backgroundColor: colors.complimentLight,
+        borderRadius: '0',
+        width: '168px',
+        heigth: '33px'
     }
 });
 
@@ -31,18 +63,41 @@ class PersonalProgress extends React.Component {
         const { classes } = this.props;
         return (
             <div className={classes.root}>
-                <h2>Personal Progress</h2>
+                <div>
+                    <h3 className={classes.header}>
+                        Personal Progress
+                    </h3>
+                </div>
                 <Grid container justify='flex-start' alignItems='center'>
                     <Grid item xs={12} style={{ paddingLeft: 20 }}>
-                        <Grid container justify='flex-start' alignItems='center' spacing={16}>
-                            <p>Level</p>
-                            <p>------</p>
+                        <Grid container justify='flex-start' alignItems='center' spacing={8}>
+                            <Grid item xs={2} md={2}>
+                                <p>Level</p>
+                            </Grid>
+                            <Grid item xs={12} md={10}>
+                                <div className={classes.backgroundLevelBar}>
+                                    <div className={classes.foregroundLevelBar}>
+                                    </div>
+                                </div>
+                            </Grid>
+                            
                         </Grid>
                     </Grid>
                     <Grid item xs={12} style={{ paddingLeft: 20 }}>
-                        <Grid container justify='flex-start' alignItems='center' spacing={16}>
-                            <p>Streak</p>
-                            <p>------</p>
+                        <Grid container justify='flex-start' alignItems='center' spacing={8}>
+                            <Grid item xs={2} md={2}>
+                                <p>Streak</p>
+                            </Grid>
+                            <Grid item xs={12} md={8}>
+                                <Grid container style={{ paddingLeft: 15 }}>
+                                    <Grid item xs={3}>
+                                        <img src={fire} width="40"/>
+                                    </Grid>
+                                    <Grid item xs={3}>
+                                        <p>10</p>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
                         </Grid>
                     </Grid>
 
@@ -58,6 +113,13 @@ class PersonalProgress extends React.Component {
                              <div className={classes.achievementBox}></div>
                         </Grid>
                     ))}
+                </Grid>
+                <Grid container justify='center' alignItems='center'>
+                    <Grid item style={{ margin: 10}}>
+                        <Button variant="contained" color='primary' className={classes.viewMoreButton}>
+                            View More
+                        </Button>
+                    </Grid>
                 </Grid>
             </div>
         );
