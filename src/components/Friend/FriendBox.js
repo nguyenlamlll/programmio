@@ -69,9 +69,9 @@ class FriendBox extends React.Component {
                                 textColor="primary"
                                 variant="fullWidth"
                             >
-                                <Tab label="This week" style={{width: 50, minWidth: 50}}/>
-                                <Tab label="This month" style={{width: 50, minWidth: 50}}/>
-                                <Tab label="All time" style={{width: 50, minWidth: 50}}/>
+                                <Tab label="This week" style={{width: 80, minWidth: 80}}/>
+                                <Tab label="This month" style={{width: 80, minWidth: 80}}/>
+                                <Tab label="All time" style={{width: 80, minWidth: 80}}/>
                             </Tabs>
                         </AppBar>
                         <SwipeableViews
