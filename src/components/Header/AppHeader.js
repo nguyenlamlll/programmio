@@ -12,6 +12,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import Button from '@material-ui/core/Button';
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -30,6 +31,19 @@ const styles = {
   },
   appBar: {
     background: '#00B80E'
+  },
+  logo: {
+    textAlign: 'left',
+    fontStyle: 'normal',
+    fontWeight: 'bold',
+    lineHeight: 'normal',
+    fontSize: '28px',
+    letterSpacing: '0.1em'
+  },
+  homeButton: {
+    flexGrow: 1,
+    display: 'flex',
+    justifyContent: 'left',
   }
 };
 
@@ -68,13 +82,20 @@ class AppHeader extends React.Component {
         </FormGroup> */}
         <AppBar position="static" className={classes.appBar}>
           <Toolbar>
-            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+            {/* <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
               <MenuIcon />
-            </IconButton>
-
-            <Typography variant="h6" color="inherit" className={classes.grow}>
-                P R O G R A M M I O
+            </IconButton> */}
+            <Typography variant="h6" color="inherit" className={classes.logo} noWrap>
+                PROGRAMMIO
             </Typography>
+            <div className={classes.homeButton}>
+              <Button color="primary" component={Link} to={`${BASE_NAME}/`} style={{color: 'white'}}>
+                Home
+              </Button>
+              <Button color="primary" component={Link} to={`${BASE_NAME}/`} style={{color: 'white'}}>
+                Forum
+              </Button>
+            </div>
             
             {auth && (
               <div>
