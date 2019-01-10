@@ -1,0 +1,63 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+
+import colors from './../../colors';
+
+const styles = theme => ({
+    root: {
+        flexGrow: 1,
+        textAlign: 'left',
+        boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.25)',
+        borderBottom: '4px solid ' + colors.primary
+    },
+    editButton: {
+        backgroundColor: colors.complimentLight,
+        borderRadius: '0',
+        width: '95px',
+        heigth: '33px'
+    }
+});
+
+
+class CourseHeader extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    
+    state = {
+
+    }
+
+    render() {
+        const { classes } = this.props;
+        return (
+            <div className={classes.root}>
+                <Grid container justify='center' alignItems='center'>
+                    <Grid item xs={12} md={9}>
+                        <h1>Course: {this.props.title}</h1>
+                    </Grid>
+                    <Grid item xs={12} md={2}
+                        container justify='flex-end'>
+                        <Grid item xs={12} sm={12} md={10} lg={7}>
+                            <Button variant="contained" color='primary' className={classes.editButton}>
+                                Edit
+                            </Button>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </div>
+        );
+
+    }
+}
+
+CourseHeader.propTypes = {
+    classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(CourseHeader);

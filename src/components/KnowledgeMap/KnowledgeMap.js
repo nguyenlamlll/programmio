@@ -5,6 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
+import Draggable from 'react-draggable';
+
 import Course from '../Course/Course';
 import KnowledgeNode from './KnowledgeNode';
 import KnowledgeMapHeader from './KnowledgeMapHeader';
@@ -73,9 +75,10 @@ class KnowledgeMap extends React.Component {
                 {this.state.isShowing && (
                     <div className={``}>
                         <KnowledgeMapHeader/>
-                        <Grid container spacing={8}>
+                        <Draggable>
+                        <Grid container spacing={8} style={{paddingTop: 50}}>
                             <Grid item xs={4}>
-                                <KnowledgeNode title='Basic' onStartLearningClick={this.handleStartLearning} />
+                                <KnowledgeNode title='Basic' onStartLearningClick={this.handleStartLearning}/>
                             </Grid>
                             <Grid item xs={4}>
                                 <KnowledgeNode title='Algorithm' onStartLearningClick={this.handleStartLearning} />
@@ -92,7 +95,17 @@ class KnowledgeMap extends React.Component {
                             <Grid item xs={4}>
                                 <KnowledgeNode title='Program' onStartLearningClick={this.handleStartLearning} />
                             </Grid>
+                            <Grid item xs={4}>
+                                <KnowledgeNode title='Logic' onStartLearningClick={this.handleStartLearning} />
+                            </Grid>
+                            <Grid item xs={4}>
+                                <KnowledgeNode title='Script' onStartLearningClick={this.handleStartLearning} />
+                            </Grid>
+                            <Grid item xs={4}>
+                                <KnowledgeNode title='Program' onStartLearningClick={this.handleStartLearning} />
+                            </Grid>
                         </Grid>
+                        </Draggable>
                     </div>
                 )}
 

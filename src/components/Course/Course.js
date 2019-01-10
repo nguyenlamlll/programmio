@@ -9,6 +9,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Checkbox from '@material-ui/core/Checkbox';
+import CourseItem from './CourseItem';
+import CourseHeader from './CourseHeader';
 
 const styles = theme => ({
 
@@ -27,8 +29,9 @@ class Course extends React.Component {
         const { classes } = this.props;
         return (
             <div>
+                <CourseHeader title={this.props.courseTitle} backClick={this.props.handleBackClick}/>
                 <Grid container>
-                    <Grid item xs={2}>
+                    {/* <Grid item xs={2}>
                         <p onClick={this.props.handleBackClick}>Back</p>
                     </Grid>
                     <Grid item xs={10}>
@@ -36,28 +39,17 @@ class Course extends React.Component {
                             {this.props.courseTitle}
                         </Typography>
                         <Divider />
-                    </Grid>
+                    </Grid> */}
                     <Grid item xs={12}>
                         <List component="nav">
-                            <Grid container>
-                                <Grid item xs={11}>
-                                    <ListItem button>
-                                        <ListItemText primary="Lesson 01: What is programming in general?" />
-                                    </ListItem>
-                                </Grid>
-                                <Grid item xs={1}>
-                                    <Checkbox/>
-                                </Grid>
-                            </Grid>
-                            <ListItem button>
-                                <ListItemText primary="Lesson 02: Basic logic turns into a program" />
-                            </ListItem>
-                            <ListItem button>
-                                <ListItemText primary="Lesson 03: Basic logic turns into a program" />
-                            </ListItem>
-                            <ListItem button>
-                                <ListItemText primary="Lesson 04: Basic logic turns into a program" />
-                            </ListItem>
+                            <CourseItem lessonNumber="01" title="What is programming in general?"/>
+                            <CourseItem lessonNumber="02" title="Something Else but you know it's harder"/>
+                            <CourseItem lessonNumber="03" title="Basic logic turns into a program"/>
+                            <CourseItem lessonNumber="04" title="Sorts: What Types There Are & Which One To Choose?"/>
+                            <CourseItem lessonNumber="05" title="Sorts: What Types There Are & Which One To Choose?"/>
+                            <CourseItem lessonNumber="06" title="Sorts: What Types There Are & Which One To Choose?"/>
+                            <CourseItem lessonNumber="07" title="Sorts: What Types There Are & Which One To Choose?"/>
+                            <CourseItem lessonNumber="08" title="Summary of What We Have Learned"/>
                         </List>
                     </Grid>
                 </Grid>

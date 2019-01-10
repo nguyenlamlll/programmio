@@ -12,6 +12,8 @@ import Divider from '@material-ui/core/Divider';
 
 import colors from './../../colors';
 
+import Draggable from 'react-draggable';
+
 function getModalStyle() {
     const top = 50;
     const left = 50;
@@ -69,7 +71,9 @@ const styles = theme => ({
 class KnowledgeNode extends React.Component {
     state = {
         isLearned: false,
-        open: false
+        open: false,
+        defaultX: this.props.defaultX,
+        defaultY: this.props.defaultY
     };
 
     handleOpen = () => {
@@ -89,16 +93,17 @@ class KnowledgeNode extends React.Component {
 
         return (
             <div>
-                <Button className={`
-                    ${classes.button}
-                    ${classes.circleBase}
-                    ${this.state.isLearned ? classes.learnedNode : ''}
-                    `}
-                    onClick={this.handleOpen}
-                >
-                    <p>{this.props.title}</p>
-                </Button>
-
+                <Draggable>
+                    <Button className={`
+                        ${classes.button}
+                        ${classes.circleBase}
+                        ${this.state.isLearned ? classes.learnedNode : ''}
+                        `}
+                        onClick={this.handleOpen}
+                    >
+                        <p>{this.props.title}</p>
+                    </Button>
+                </Draggable>
                 <Modal
                     aria-labelledby="simple-modal-title"
                     aria-describedby="simple-modal-description"
