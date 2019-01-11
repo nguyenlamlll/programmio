@@ -9,6 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import AppHeader from './components/Header/AppHeader';
 import Main from './components/Main';
 import Profile from './components/Profile/Profile';
+import CourseContent from './components/Course/CourseContent';
 import { BASE_NAME } from './Config';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -22,6 +23,7 @@ class App extends Component {
 
           <Route exact path={`${BASE_NAME}/`} component={Main} />
           <Route path={`${BASE_NAME}/profile`} component={Profile} />
+          <Route exact path={`${BASE_NAME}/course_id`} component={CourseContent} />
         </div>
       </Router>
     );

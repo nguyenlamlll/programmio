@@ -35,11 +35,11 @@ const styles = theme => ({
         borderRadius: '50%',
         width: '90px',
         height: '90px',
-        background: '#8DD9AD',
+        background: '#76F473',
         // border: '3px solid red'
     },
     learnedNode: {
-        background: '#38E849'
+        background: '#00B80E'
     },
     extendedIcon: {
         marginRight: theme.spacing.unit,
@@ -69,6 +69,9 @@ const styles = theme => ({
 });
 
 class KnowledgeNode extends React.Component {
+    componentDidMount() {
+        console.log(this.state);
+    }
     state = {
         isLearned: false,
         open: false,
@@ -97,7 +100,7 @@ class KnowledgeNode extends React.Component {
                     <Button className={`
                         ${classes.button}
                         ${classes.circleBase}
-                        ${this.state.isLearned ? classes.learnedNode : ''}
+                        ${this.props.isLearned ? classes.learnedNode : ''}
                         `}
                         onClick={this.handleOpen}
                     >

@@ -76,35 +76,37 @@ class KnowledgeMap extends React.Component {
                     <div className={``}>
                         <KnowledgeMapHeader/>
                         <Draggable>
-                        <Grid container spacing={8} style={{paddingTop: 50}}>
-                            <Grid item xs={4}>
-                                <KnowledgeNode title='Basic' onStartLearningClick={this.handleStartLearning}/>
+                            <Grid container spacing={8} style={{paddingTop: 50}}>
+                                <Grid item xs={4}>
+                                    <KnowledgeNode title='Advanced' onStartLearningClick={this.handleStartLearning}/>
+                                </Grid>
+                                <Grid item xs={4}>
+                                    <KnowledgeNode title='Algorithm' onStartLearningClick={this.handleStartLearning} />
+                                </Grid>
+                                <Grid item xs={4}>
+                                    <KnowledgeNode title='Structures' onStartLearningClick={this.handleStartLearning} />
+                                </Grid>
+                                <Grid item xs={4}>
+                                    <KnowledgeNode title='Logic' onStartLearningClick={this.handleStartLearning} 
+                                        isLearned={true}/>
+                                </Grid>
+                                <Grid item xs={4}>
+                                    <KnowledgeNode title='Basic' onStartLearningClick={this.handleStartLearning} 
+                                        isLearned={true}/>
+                                </Grid>
+                                <Grid item xs={4}>
+                                    <KnowledgeNode title='Program' onStartLearningClick={this.handleStartLearning} />
+                                </Grid>
+                                <Grid item xs={4}>
+                                    <KnowledgeNode title='Logic' onStartLearningClick={this.handleStartLearning} />
+                                </Grid>
+                                <Grid item xs={4}>
+                                    <KnowledgeNode title='Script' onStartLearningClick={this.handleStartLearning} />
+                                </Grid>
+                                <Grid item xs={4}>
+                                    <KnowledgeNode title='Program' onStartLearningClick={this.handleStartLearning} />
+                                </Grid>
                             </Grid>
-                            <Grid item xs={4}>
-                                <KnowledgeNode title='Algorithm' onStartLearningClick={this.handleStartLearning} />
-                            </Grid>
-                            <Grid item xs={4}>
-                                <KnowledgeNode title='Structures' onStartLearningClick={this.handleStartLearning} />
-                            </Grid>
-                            <Grid item xs={4}>
-                                <KnowledgeNode title='Logic' onStartLearningClick={this.handleStartLearning} />
-                            </Grid>
-                            <Grid item xs={4}>
-                                <KnowledgeNode title='Script' onStartLearningClick={this.handleStartLearning} />
-                            </Grid>
-                            <Grid item xs={4}>
-                                <KnowledgeNode title='Program' onStartLearningClick={this.handleStartLearning} />
-                            </Grid>
-                            <Grid item xs={4}>
-                                <KnowledgeNode title='Logic' onStartLearningClick={this.handleStartLearning} />
-                            </Grid>
-                            <Grid item xs={4}>
-                                <KnowledgeNode title='Script' onStartLearningClick={this.handleStartLearning} />
-                            </Grid>
-                            <Grid item xs={4}>
-                                <KnowledgeNode title='Program' onStartLearningClick={this.handleStartLearning} />
-                            </Grid>
-                        </Grid>
                         </Draggable>
                     </div>
                 )}

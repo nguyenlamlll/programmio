@@ -41,7 +41,7 @@ class Course extends React.Component {
                         <Divider />
                     </Grid> */}
                     <Grid item xs={12}>
-                        <List component="nav">
+                        <List>
                             <CourseItem lessonNumber="01" title="What is programming in general?"/>
                             <CourseItem lessonNumber="02" title="Something Else but you know it's harder"/>
                             <CourseItem lessonNumber="03" title="Basic logic turns into a program"/>
